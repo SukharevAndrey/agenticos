@@ -23,6 +23,8 @@ Two things are versioned separately from this file and worth knowing about:
 
 - Add Russian to the console, the desktop app's native start, account language selection, person briefings, voice previews and channel greetings. Body and code text render Cyrillic in the console's own fonts; display headings, whose face has no Cyrillic, fall back to Arial, or to the system font where Arial is absent.
 
+- Publish the documentation site, `README.md`, `CONTRIBUTING.md`, `SECURITY.md` and `CODE_OF_CONDUCT.md` in Russian. The Russian pages use the console's Russian terms (агент, спецификация, навык, запуск, хранилище секретов) and quote its Russian labels with the English in parentheses.
+
 ### Fixed
 
 - The agents list's status filter shows its options in the console's language; they were English in every locale.

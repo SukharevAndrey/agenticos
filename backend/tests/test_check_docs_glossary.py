@@ -1,6 +1,6 @@
 """What the docs glossary guard refuses, and what a reader does not read as prose.
 
-`scripts/check_docs_glossary.py` gates `make lint` on the Polish and German pages
+`scripts/check_docs_glossary.py` gates `make lint` on the Polish, German and Russian pages
 about the eval screens using the words the console uses. The interesting part is
 where it does not look: code, link targets, anchors and an English console label
 quoted in parentheses are what a correct page holds, so a guard that matched them

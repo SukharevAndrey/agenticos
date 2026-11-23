@@ -1,4 +1,4 @@
-"""Refuse a Polish or German page about the eval screens that names a concept two ways.
+"""Refuse a Polish, German or Russian page about the eval screens that names a concept two ways.
 
 The console's catalogs say one word per concept on the eval screens - the
 glossary in `docs/howto/translate.md` - and `frontend/messages/eval-terms.test.ts`
@@ -143,7 +143,7 @@ def main() -> int:
         return 1
     found = offences()
     if not found:
-        print("The Polish and German eval pages use the glossary's words.")
+        print("The Polish, German and Russian eval pages use the glossary's words.")
         return 0
     print(f"Words the eval glossary replaced ({len(found)}):\n")
     for page, number, form, use in found:
