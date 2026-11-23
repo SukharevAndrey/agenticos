@@ -1,5 +1,5 @@
 ---
-source_sha: "8893d5c7fe0b"
+source_sha: "ba7833cfb5a2"
 ---
 
 # Der Code der Konsole { #the-consoles-code }
@@ -134,13 +134,18 @@ Drei Regeln, über die man stolpert:
 Englisch ist die Ausgangssprache und wird unter jedes Locale gemischt, also
 rendert eine fehlende Übersetzung Englisch statt des Keys.
 
-!!! info "Die eigenen Nomen des Produkts bleiben in jedem Locale englisch"
+!!! info "Die eigenen Nomen des Produkts bleiben englisch"
 
     agent, spec, capability, skill, embed, budget, run, prompt, provider, token,
     vault, workspace, sandbox, MCP. Sie benennen Dinge, die ein Kunde auch in
     den Docs, in der API und im exportierten YAML antrifft — sie in der UI und
     sonst nirgends zu übersetzen, macht zwei Vokabulare für ein Produkt. Flektieren
     Sie sie, ersetzen Sie sie nicht.
+
+    Russisch ist die Ausnahme: Ein lateinisches Nomen nimmt keine russische Endung
+    an, deshalb schreiben `ru.json` und die russischen Seiten den kyrillischen
+    Begriff, den [Eine Seite übersetzen](howto/translate.md#russian-writes-them-in-cyrillic)
+    aufführt.
 
 ## Vier Registries, und keine zweite Quelle { #four-registries-and-no-second-source }
 

@@ -119,13 +119,17 @@ Three rules that catch people out:
 English is the source language and is merged under every locale, so a missing
 translation renders English rather than the key.
 
-!!! info "The product's own nouns stay English in every locale"
+!!! info "The product's own nouns stay English"
 
     agent, spec, capability, skill, embed, budget, run, prompt, provider, token,
     vault, workspace, sandbox, MCP. They name things a client also meets in the
     docs, in the API and in exported YAML — translating them in the UI and
     nowhere else makes two vocabularies for one product. Inflect them, do not
     replace them.
+
+    Russian is the exception: a Latin noun takes no Russian ending, so `ru.json`
+    and the Russian pages write the Cyrillic term that
+    [Translate a page](howto/translate.md#russian-writes-them-in-cyrillic) lists.
 
 ## Four registries, and no second source
 

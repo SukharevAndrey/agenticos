@@ -1,5 +1,5 @@
 ---
-source_sha: "8893d5c7fe0b"
+source_sha: "ba7833cfb5a2"
 ---
 
 # Kod konsoli { #the-consoles-code }
@@ -125,13 +125,17 @@ Trzy reguły, na których ludzie się przewracają:
 Angielski jest językiem źródłowym i jest podkładany pod każdą lokalizację, więc
 brakujące tłumaczenie renderuje angielski, a nie klucz.
 
-!!! info "Własne rzeczowniki produktu zostają po angielsku w każdej lokalizacji"
+!!! info "Własne rzeczowniki produktu zostają po angielsku"
 
     agent, spec, capability, skill, embed, budget, run, prompt, provider, token,
     vault, workspace, sandbox, MCP. Nazywają rzeczy, które klient spotyka też w
     dokumentacji, w API i w wyeksportowanym YAML-u — tłumaczenie ich w UI i
     nigdzie indziej robi dwa słowniki dla jednego produktu. Odmieniaj je, nie
     zastępuj.
+
+    Wyjątkiem jest rosyjski: łaciński rzeczownik nie przyjmuje rosyjskiej
+    końcówki, więc `ru.json` i rosyjskie strony zapisują cyrylicą termin, który
+    podaje [Przetłumacz stronę](howto/translate.md#russian-writes-them-in-cyrillic).
 
 ## Cztery rejestry i żadnego drugiego źródła { #four-registries-and-no-second-source }
 
