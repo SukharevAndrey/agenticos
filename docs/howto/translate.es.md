@@ -1,12 +1,12 @@
 ---
-source_sha: "85e967e18444"
+source_sha: "8a2d7c75436d"
 ---
 
 # Traduce una página { #translate-a-page }
 
-Este sitio se publica en inglés, polaco, alemán y español desde un único árbol
-`docs/`. El inglés es la lengua de origen: una página se escribe primero en
-inglés, y las otras tres son traducciones de ella que pueden quedarse atrás y de
+Este sitio se publica en inglés, polaco, alemán, español y ruso desde un único
+árbol `docs/`. El inglés es la lengua de origen: una página se escribe primero en
+inglés, y las otras cuatro son traducciones de ella que pueden quedarse atrás y de
 las que se espera que lo digan cuando ocurre.
 
 ## Dónde vive una traducción { #where-a-translation-lives }
@@ -19,12 +19,13 @@ docs/install.md      the English source
 docs/install.pl.md   Polish
 docs/install.de.md   German
 docs/install.es.md   Spanish
+docs/install.ru.md   Russian
 ```
 
 [mkdocs-static-i18n](https://github.com/ultrabug/mkdocs-static-i18n) construye un
 sitio por locale a partir de ese árbol. El inglés conserva las URL que siempre ha
 publicado — `/install/` sigue siendo `/install/` — y cada traducción se añade a su
-lado en `/pl/install/`, `/de/install/` y `/es/install/`. El selector de idioma de
+lado en `/pl/install/`, `/de/install/`, `/es/install/` y `/ru/install/`. El selector de idioma de
 la cabecera se mueve entre ellas sin que el lector pierda su sitio.
 
 Nada más cambia. No hay un archivo de navegación aparte, ni un segundo `docs_dir`,
@@ -93,7 +94,7 @@ páginas en este sitio y muchos llevan un fragmento, así que esto no es un caso
 raro — y `mkdocs build --strict` valida la ruta de un enlace pero **no** su
 fragmento, de modo que nada más se da cuenta.
 
-Fijarlas significa además que un mismo enlace funciona en los cuatro idiomas sin
+Fijarlas significa además que un mismo enlace funciona en los cinco idiomas sin
 reescribirse por locale, y que un enlace permanente que alguien haya compartido
 sigue funcionando cuando cambia de idioma.
 
@@ -138,8 +139,8 @@ Deja lo siguiente exactamente como está en inglés:
 | Nombres de clases de error y de excepción | `AuthorizationError` |
 | Nombres de producto | Docker Compose, PostgreSQL, Slack, Logfire |
 | Bloques Mermaid | Una etiqueta con un corchete o una comilla dentro rompe el grafo, y la build no puede avisarte — Mermaid se renderiza en el navegador |
-| Una etiqueta de la consola que el lector tiene que encontrar en pantalla | Donde la interfaz la muestra en inglés, `Admin → Response Ratings` es una referencia, no una frase. Donde el propio catálogo de la consola la traduce (`frontend/messages/pl.json`, `de.json`), escribe la etiqueta que muestra la interfaz del lector con la inglesa entre paréntesis - «Głos (Voice)» -, para que se encuentre en cualquiera de los dos idiomas |
-| Rutas de imagen | Una captura sirve para las cuatro locales |
+| Una etiqueta de la consola que el lector tiene que encontrar en pantalla | Donde la interfaz la muestra en inglés, `Admin → Response Ratings` es una referencia, no una frase. Donde el propio catálogo de la consola la traduce (`frontend/messages/pl.json`, `de.json`, `ru.json`), escribe la etiqueta que muestra la interfaz del lector con la inglesa entre paréntesis - «Głos (Voice)» -, para que se encuentre en cualquiera de los dos idiomas |
+| Rutas de imagen | Una captura sirve para las cinco locales |
 
 Un comentario dentro de un bloque de código es prosa que el lector lee en vez de
 teclear, así que se puede traducir — pero solo donde el bloque sea una
@@ -201,6 +202,36 @@ El alemán los compone con guion cuando la segunda mitad es alemana — Run-Kost
 Vault-Eintrag, Sandbox-Session — y conserva la mayúscula propia de la palabra
 inglesa.
 
+### El ruso los escribe en cirílico { #russian-writes-them-in-cyrillic }
+
+Un sustantivo latino no puede tomar una terminación rusa dentro de una frase en
+cirílico - "spec'а", "run'ом" -, así que `frontend/messages/ru.json` y las páginas
+en ruso escriben estos sustantivos como términos rusos. El nombre inglés sigue
+siendo el que usan la API y el spec, y se queda también en el código, las claves y
+las rutas de una página en ruso.
+
+| Inglés | Ruso |
+|---|---|
+| agent | агент |
+| spec | спецификация |
+| capability | возможность |
+| skill | навык |
+| dataset | набор данных |
+| embed | встраивание |
+| budget | бюджет |
+| run | запуск |
+| prompt | промпт |
+| provider | провайдер |
+| token | токен |
+| vault | хранилище секретов («Секреты» en el menú) |
+| workspace | рабочее пространство |
+| sandbox | песочница |
+| MCP | MCP |
+
+MCP conserva su grafía latina y no toma terminación: «MCP-сервер». El vault
+es «хранилище секретов», y «Секреты» como entrada del menú: en grafía latina
+se leería como HashiCorp Vault, que la plataforma no usa.
+
 ### Una persona sin nombre es masculina, en los tres idiomas { #a-generic-person-is-masculine-in-all-three-languages }
 
 El inglés dice "the reader", "an operator", "whoever wrote the agent" sin elegir
@@ -211,7 +242,7 @@ lector se encuentra con ambas.
 
 Por eso la forma genérica de un rol es masculina — der Leser, der Betreiber, der
 Autor, der Entwickler, der Administrator, der Besitzer, der Kunde; czytelnik,
-operator, autor; el lector, el operador, el autor. Esto vale para una persona a
+operator, autor; el lector, el operador, el autor; читатель, оператор, автор. Esto vale para una persona a
 la que nadie ha puesto nombre. Un ejemplo con nombre conserva el género que el
 ejemplo le da, y lo mismo una frase sobre una persona concreta.
 
@@ -244,23 +275,23 @@ pestaña la nombra como lo hace la pestaña. Los catálogos de la consola los
 guardan, y `frontend/messages/eval-terms.test.ts` rechaza en los espacios de
 nombres de evals las formas mezcladas a las que sustituyeron. Una página que cita
 una de estas pantallas usa la misma palabra, y `scripts/check_docs_glossary.py`
-lo exige en `make lint` a las páginas en polaco y alemán sobre ellas, con los
+lo exige en `make lint` a las páginas en polaco, alemán y ruso sobre ellas, con los
 mismos patrones de `frontend/messages/eval-terms.json`.
 
-| English | Polish | German | Spanish |
-|---|---|---|---|
-| case | przypadek, przypadki, przypadków | der Fall, die Fälle | el caso |
-| eval, the Evals tab | ewaluacja, zakładka Ewaluacje | das Eval, der Tab Evals | el eval, la pestaña Evals |
-| judge | sędzia | der Bewerter | el juez |
-| review | przegląd | die Prüfung | la revisión |
-| environment | środowisko | die Umgebung | el entorno |
-| draft: an agent's unpublished spec | wersja robocza | der Entwurf | el borrador |
-| draft: a text waiting to be accepted - a gap's content, a generated case | szkic | der Entwurf | el borrador |
-| the Build tab | zakładka Budowa | der Tab Bauen | la pestaña Build |
-| breaks / fixes a case | psuje / naprawia przypadek | verschlechtert / behebt einen Fall | rompe / arregla un caso |
-| AI assistance | wsparcie AI | die KI-Unterstützung | la asistencia de IA |
-| the Activity page | Aktywność | die Aktivität | Activity |
-| the Publish button | Opublikuj | Veröffentlichen | Publicar |
+| English | Polish | German | Spanish | Russian |
+|---|---|---|---|---|
+| case | przypadek, przypadki, przypadków | der Fall, die Fälle | el caso | кейс, кейса, кейсов |
+| eval, the Evals tab | ewaluacja, zakładka Ewaluacje | das Eval, der Tab Evals | el eval, la pestaña Evals | оценка, вкладка Оценки |
+| judge | sędzia | der Bewerter | el juez | судья |
+| review | przegląd | die Prüfung | la revisión | проверка |
+| environment | środowisko | die Umgebung | el entorno | окружение |
+| draft: an agent's unpublished spec | wersja robocza | der Entwurf | el borrador | черновик |
+| draft: a text waiting to be accepted - a gap's content, a generated case | szkic | der Entwurf | el borrador | черновик |
+| the Build tab | zakładka Budowa | der Tab Bauen | la pestaña Build | вкладка Конструктор |
+| breaks / fixes a case | psuje / naprawia przypadek | verschlechtert / behebt einen Fall | rompe / arregla un caso | перестала проходить / теперь проходит кейс |
+| AI assistance | wsparcie AI | die KI-Unterstützung | la asistencia de IA | помощь ИИ |
+| the Activity page | Aktywność | die Aktivität | Activity | Активность |
+| the Publish button | Opublikuj | Veröffentlichen | Publicar | Опубликовать |
 
 Un borrador sigue sin ser nunca la versión publicada: el par published / draft de
 [Terminología que tiene que ser exacta](#terminology-that-has-to-be-exact)
@@ -311,8 +342,8 @@ sin localizar la hace fallar. Una página sin traducción, como `docs/ROADMAP.md
 se queda en inglés, y la barra de idiomas se deja en paz: apuntar a otros idiomas
 es justo para lo que está.
 
-**Cada archivo lleva una barra de idiomas** a sus tres traducciones, y las
-traducciones enlazan de vuelta. Actualiza los cuatro cuando se añada un idioma.
+**Cada archivo lleva una barra de idiomas** a sus cuatro traducciones, y las
+traducciones enlazan de vuelta. Actualiza los cinco cuando se añada un idioma.
 
 `CHANGELOG.md` no se traduce, por la razón por la que `release-notes.md` tampoco:
 es el historial de commits.
@@ -333,8 +364,8 @@ el historial de commits.
 ## Buscar en polaco { #searching-in-polish }
 
 lunr.js, que mueve la búsqueda del sitio, no tiene stemmer polaco, así que la
-búsqueda en `/pl/` casa palabras enteras en vez de raíces. El alemán y el español
-se lematizan con normalidad. No hay nada que configurar — la build lo dice en su
+búsqueda en `/pl/` casa palabras enteras en vez de raíces. El alemán, el español y
+el ruso se lematizan con normalidad. No hay nada que configurar — la build lo dice en su
 log — pero conviene saberlo antes de que alguien lo reporte como un fallo.
 
 ## El flujo de trabajo { #the-workflow }
@@ -354,7 +385,7 @@ log — pero conviene saberlo antes de que alguien lo reporte como un fallo.
    ingleses en uno suele tropezar con él.
 
 Cambiar una página inglesa es el mismo bucle desde el otro extremo: cámbiala y
-luego o vuelves a traducir las tres traducciones en el mismo cambio, o las dejas y
+luego o vuelves a traducir las cuatro traducciones en el mismo cambio, o las dejas y
 que la puerta las reporte — lo que no puedes hacer es estampar `--update` encima.
 
 ## Resumen { #recap }

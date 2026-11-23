@@ -1,6 +1,6 @@
 # Security
 
-**English** · [Polski](SECURITY.pl.md) · [Deutsch](SECURITY.de.md) · [Español](SECURITY.es.md)
+**English** · [Polski](SECURITY.pl.md) · [Deutsch](SECURITY.de.md) · [Español](SECURITY.es.md) · [Русский](SECURITY.ru.md)
 
 > [!IMPORTANT]
 > The English text is the authoritative one. A translation is a convenience, and

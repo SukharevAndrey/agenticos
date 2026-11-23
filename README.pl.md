@@ -1,4 +1,4 @@
-<!-- source_sha: 5717f0be4e64 -->
+<!-- source_sha: 6e462265425f -->
 
 <div align="center">
 
@@ -45,7 +45,8 @@
   <a href="README.md">English</a> &middot;
   <b>Polski</b> &middot;
   <a href="README.de.md">Deutsch</a> &middot;
-  <a href="README.es.md">Español</a>
+  <a href="README.es.md">Español</a> &middot;
+  <a href="README.ru.md">Русский</a>
 </p>
 
 </div>

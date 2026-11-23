@@ -221,6 +221,33 @@ plugins:
             Use cases: Casos de uso
             Comparisons: Comparaciones
             Release Notes: Notas de la versión
+        - locale: ru
+          name: Русский
+          build: true
+          site_description: Платформа ИИ-агентов с открытым исходным кодом на собственной инфраструктуре — для ИИ-коллег в вашей компании.
+          nav_translations:
+            Features: Функции
+            Learn: Обучение
+            Get started: Начало работы
+            Build the agent: Создание агента
+            Put it in front of people: Доступ для людей
+            Keep it under control: Контроль
+            How-to - recipes: Руководства - рецепты
+            Reference: Справочник
+            Resources: Ресурсы
+            Development - contributing: Разработка - участие в проекте
+            Extending the platform: Расширение платформы
+            About: О проекте
+            Use cases: Примеры использования
+            Comparisons: Сравнения
+            Release Notes: Заметки о выпусках
+            Automation and teams of agents: Автоматизация и команды агентов
+            Content and communication: Контент и коммуникации
+            Customer support and service: Поддержка клиентов
+            Documents and knowledge: Документы и знания
+            Engineering and safety: Разработка и безопасность
+            Personal productivity: Личная продуктивность
+            Research and analysis: Исследования и аналитика
   - search
   # Screenshots of the console are the only thing on this site a reader cannot
   # zoom into, and they carry small text - a model picker, a budget field. This

@@ -1,5 +1,5 @@
 {
-  "about": "One word per concept on the eval screens, in Polish, German and Russian: for Polish and German, the glossary in docs/howto/translate.md; the site publishes no Russian, so the Russian words are the `use` of each entry here. Each pattern is a form that reads as a second word for a glossary term. Matched case-insensitively. frontend/messages/eval-terms.test.ts applies it to the catalogs under `scope`; scripts/check_docs_glossary.py to the pages under `docs`.",
+  "about": "One word per concept on the eval screens, in Polish, German and Russian: the glossary in docs/howto/translate.md. Each pattern is a form that reads as a second word for a glossary term. Matched case-insensitively. frontend/messages/eval-terms.test.ts applies it to the catalogs under `scope`; scripts/check_docs_glossary.py to the pages under `docs`.",
   "scope": [
     "evals.",
     "authoring.",
@@ -219,8 +219,9 @@
     },
     "allow": {
       "pl": ["Eval judge", "Knowledge gap drafter"],
-      "de": ["Eval judge", "Knowledge gap drafter"]
+      "de": ["Eval judge", "Knowledge gap drafter"],
+      "ru": ["Eval judge", "Knowledge gap drafter"]
     },
-    "locales": ["pl", "de"]
+    "locales": ["pl", "de", "ru"]
   }
 }

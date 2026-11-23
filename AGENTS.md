@@ -211,9 +211,9 @@ pages and build checks. Add new pages to `mkdocs.yml`, relevant cross-links and
 the topic map below. `scripts/docs_drift.py` contains the code-to-page trigger map;
 its Stop hook is a reminder, not a completeness check or a gate.
 
-The site publishes in four languages, so a published page owes a `.pl.md`, a
-`.de.md` and an `.es.md` beside it, and editing an English page makes all three
-stale. The same is true of `README.md`, `CONTRIBUTING.md`, `SECURITY.md` and
+The site publishes in five languages, so a published page owes a `.pl.md`, a
+`.de.md`, an `.es.md` and a `.ru.md` beside it, and editing an English page makes
+all four stale. The same is true of `README.md`, `CONTRIBUTING.md`, `SECURITY.md` and
 `CODE_OF_CONDUCT.md`, which GitHub renders rather than MkDocs: those record the
 fingerprint in an HTML comment, cannot pin an anchor, rewrite their own in-page
 links per language, and point every other link at the reader's own language.

@@ -1,11 +1,11 @@
 """Refuse a locale that presents itself as complete while it is not.
 
-The site publishes four languages from one `docs/` tree, and
+The site publishes five languages from one `docs/` tree, and
 `fallback_to_default` means a page nobody has translated still answers on
 `/de/...` - in English, under a German URL, inside a German navigation. Nothing
 fails, nothing warns, and a reader has no way to tell that page from a translated
 one. The same is true one step later: an English page edited after it was
-translated leaves three translations quietly describing what the product used to
+translated leaves four translations quietly describing what the product used to
 do.
 
 So this guard asks three questions of every published page, for every locale:

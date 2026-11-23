@@ -1,8 +1,8 @@
-<!-- source_sha: 471d6c338ae3 -->
+<!-- source_sha: a0350918c2d6 -->
 
 # Sicherheit
 
-[English](SECURITY.md) · [Polski](SECURITY.pl.md) · **Deutsch** · [Español](SECURITY.es.md)
+[English](SECURITY.md) · [Polski](SECURITY.pl.md) · **Deutsch** · [Español](SECURITY.es.md) · [Русский](SECURITY.ru.md)
 
 > [!IMPORTANT]
 > Der englische Text ist der maßgebliche. Eine Übersetzung ist eine

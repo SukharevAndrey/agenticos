@@ -1,6 +1,6 @@
 # Contributing to AgenticOS
 
-**English** · [Polski](CONTRIBUTING.pl.md) · [Deutsch](CONTRIBUTING.de.md) · [Español](CONTRIBUTING.es.md)
+**English** · [Polski](CONTRIBUTING.pl.md) · [Deutsch](CONTRIBUTING.de.md) · [Español](CONTRIBUTING.es.md) · [Русский](CONTRIBUTING.ru.md)
 
 Thanks for looking. This document is short on ceremony and specific about the
 things that actually get pull requests rejected.

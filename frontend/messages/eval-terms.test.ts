@@ -9,9 +9,8 @@ import ru from "./ru.json";
  * That the eval screens say one word for one thing in Polish, German and Russian.
  *
  * The forms refused are in `eval-terms.json`, which `scripts/check_docs_glossary.py`
- * reads too for the pages about the same screens. The Polish and German words are
- * the glossary in `docs/howto/translate.md`, the Russian ones only that file's, and
- * they are the ones
+ * reads too for the pages about the same screens. The words are the glossary in
+ * `docs/howto/translate.md`, and they are the ones
  * the tabs already wear, so a sentence naming a tab names it as the tab does. Each
  * pattern is a form that reads as a second word for a glossary term - "case'ów"
  * for "przypadków", "Evale" for "Ewaluacje", "Draft" for "Entwurf". The product's

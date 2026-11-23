@@ -27,7 +27,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DOCS = REPO_ROOT / "docs"
 
 DEFAULT_LOCALE = "en"
-LOCALES = ("pl", "de", "es")
+LOCALES = ("pl", "de", "es", "ru")
 
 FINGERPRINT_KEY = "source_sha"
 FINGERPRINT_LENGTH = 12

@@ -21,10 +21,10 @@ import yaml
 from pydantic import BaseModel, ConfigDict, Field, PrivateAttr, ValidationError, model_validator
 
 Category = Literal["factual", "negative", "cross_language"]
-Locale = Literal["en", "pl", "de", "es"]
+Locale = Literal["en", "pl", "de", "es", "ru"]
 
 CATEGORIES: tuple[Category, ...] = ("factual", "negative", "cross_language")
-_SUFFIX_LOCALES: dict[str, Locale] = {"pl": "pl", "de": "de", "es": "es"}
+_SUFFIX_LOCALES: dict[str, Locale] = {"pl": "pl", "de": "de", "es": "es", "ru": "ru"}
 
 # A page key starts with a letter or digit and is a relative `.md` path: no
 # leading slash, no `..`, nothing that could name a file outside `docs/`.

@@ -2,11 +2,11 @@
 source_sha: "7cb876b5ef26"
 ---
 
-<!-- source_sha: 6ba9e8a85274 -->
+<!-- source_sha: df878ef8dc87 -->
 
 # Zu AgenticOS beitragen
 
-[English](CONTRIBUTING.md) · [Polski](CONTRIBUTING.pl.md) · **Deutsch** · [Español](CONTRIBUTING.es.md)
+[English](CONTRIBUTING.md) · [Polski](CONTRIBUTING.pl.md) · **Deutsch** · [Español](CONTRIBUTING.es.md) · [Русский](CONTRIBUTING.ru.md)
 
 Danke fürs Vorbeischauen. Dieses Dokument hält sich nicht mit Zeremonie auf und
 wird konkret bei den Dingen, an denen Pull Requests tatsächlich scheitern.

@@ -60,7 +60,7 @@ SOCIAL_IMAGE = "assets/social-preview.png"
 # The id every locale's FAQ heading carries: translations pin English anchors, so
 # `{ #frequently-asked-questions }` is the one marker the Polish page shares too.
 FAQ_SECTION_ID = "frequently-asked-questions"
-OG_LOCALES = {"en": "en_US", "pl": "pl_PL", "de": "de_DE", "es": "es_ES"}
+OG_LOCALES = {"en": "en_US", "pl": "pl_PL", "de": "de_DE", "es": "es_ES", "ru": "ru_RU"}
 
 _CHANGELOG = Path(__file__).resolve().parent.parent / "CHANGELOG.md"
 _DOCS_LINK = re.compile(r"\]\(docs/(?=[\w./#-]+\))")
@@ -88,6 +88,10 @@ UNTRANSLATED = {
         "Esta página todavía no está traducida",
         "Estás leyendo el original en inglés. Aún no existe una traducción de esta página.",
     ),
+    "ru": (
+        "Эта страница ещё не переведена",
+        "Вы читаете английский оригинал. Перевода этой страницы пока нет.",
+    ),
 }
 
 OUT_OF_DATE = {
@@ -102,6 +106,10 @@ OUT_OF_DATE = {
     "es": (
         "Esta traducción está desactualizada",
         "El original en inglés ha cambiado desde que se hizo esta traducción, así que algunas partes pueden no describir el comportamiento actual. La versión en inglés es la que manda.",
+    ),
+    "ru": (
+        "Этот перевод устарел",
+        "Английский оригинал изменился после того, как был сделан этот перевод, поэтому часть текста может уже не описывать текущее поведение. Определяющей считается английская версия.",
     ),
 }
 

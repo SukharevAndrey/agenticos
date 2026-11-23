@@ -154,9 +154,10 @@ There is no `(marketing)` route group.
   provider провайдер, token токен, workspace рабочее пространство, sandbox
   песочница. MCP stays Latin and takes no ending (MCP-сервер). The vault is
   хранилище секретов, Секреты as a menu item: in Latin it reads as HashiCorp Vault,
-  which the platform does not use. The site publishes no Russian, so this list
-  lives here and not in `docs/howto/translate.md`; the eval screens' Russian words
-  are the `use` of each `mixed.ru` entry in `eval-terms.json`.
+  which the platform does not use. The Russian pages of the site write the same
+  terms: the table is under "Russian writes them in Cyrillic" in
+  `docs/howto/translate.md`, and `eval-terms.json` holds the eval screens' Russian
+  words like the Polish and German ones.
 - **Translate a namespace, not a branch.** Seventy translated strings among four
   hundred English ones in one dialog is worse than a consistently English one, so
   the unit of work is the namespace a person reads on one screen - which is why

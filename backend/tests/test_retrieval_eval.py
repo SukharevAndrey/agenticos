@@ -73,6 +73,7 @@ class TestPageKeys:
     def test_a_translation_is_the_same_page_in_another_locale(self):
         assert dataset.page_key("directory.pl.md") == ("directory.md", "pl")
         assert dataset.page_key("howto/translate.es.md") == ("howto/translate.md", "es")
+        assert dataset.page_key("howto/translate.ru.md") == ("howto/translate.md", "ru")
         assert dataset.page_key("directory.md") == ("directory.md", "en")
 
     def test_a_dotted_name_is_not_mistaken_for_a_locale(self):

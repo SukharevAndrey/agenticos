@@ -1,6 +1,6 @@
 # Code of Conduct
 
-**English** · [Polski](CODE_OF_CONDUCT.pl.md) · [Deutsch](CODE_OF_CONDUCT.de.md) · [Español](CODE_OF_CONDUCT.es.md)
+**English** · [Polski](CODE_OF_CONDUCT.pl.md) · [Deutsch](CODE_OF_CONDUCT.de.md) · [Español](CODE_OF_CONDUCT.es.md) · [Русский](CODE_OF_CONDUCT.ru.md)
 
 ## The short version
 

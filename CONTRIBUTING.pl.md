@@ -2,11 +2,11 @@
 source_sha: "7cb876b5ef26"
 ---
 
-<!-- source_sha: 6ba9e8a85274 -->
+<!-- source_sha: df878ef8dc87 -->
 
 # Współtworzenie AgenticOS
 
-[English](CONTRIBUTING.md) · **Polski** · [Deutsch](CONTRIBUTING.de.md) · [Español](CONTRIBUTING.es.md)
+[English](CONTRIBUTING.md) · **Polski** · [Deutsch](CONTRIBUTING.de.md) · [Español](CONTRIBUTING.es.md) · [Русский](CONTRIBUTING.ru.md)
 
 Dzięki, że zaglądasz. Ten dokument jest oszczędny w ceremoniale i konkretny w
 tym, co faktycznie sprawia, że pull requesty są odrzucane.

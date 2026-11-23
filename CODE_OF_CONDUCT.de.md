@@ -2,11 +2,11 @@
 source_sha: "d2293366e316"
 ---
 
-<!-- source_sha: d2293366e316 -->
+<!-- source_sha: 9fe1b60cf9b1 -->
 
 # Verhaltenskodex
 
-[English](CODE_OF_CONDUCT.md) · [Polski](CODE_OF_CONDUCT.pl.md) · **Deutsch** · [Español](CODE_OF_CONDUCT.es.md)
+[English](CODE_OF_CONDUCT.md) · [Polski](CODE_OF_CONDUCT.pl.md) · **Deutsch** · [Español](CODE_OF_CONDUCT.es.md) · [Русский](CODE_OF_CONDUCT.ru.md)
 
 ## Die kurze Fassung
 

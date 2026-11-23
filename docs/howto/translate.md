@@ -1,8 +1,8 @@
 # Translate a page
 
-This site publishes in English, Polish, German and Spanish from one `docs/`
-tree. English is the source language: a page is written in English first, and
-the other three are translations of it that can fall behind and are expected to
+This site publishes in English, Polish, German, Spanish and Russian from one
+`docs/` tree. English is the source language: a page is written in English
+first, and the other four are translations of it that can fall behind and are expected to
 say so when they have.
 
 ## Where a translation lives
@@ -15,12 +15,13 @@ docs/install.md      the English source
 docs/install.pl.md   Polish
 docs/install.de.md   German
 docs/install.es.md   Spanish
+docs/install.ru.md   Russian
 ```
 
 [mkdocs-static-i18n](https://github.com/ultrabug/mkdocs-static-i18n) builds one
 site per locale from that tree. English keeps the URLs it has always published -
 `/install/` is still `/install/` - and each translation is added beside it at
-`/pl/install/`, `/de/install/` and `/es/install/`. The language switcher in the
+`/pl/install/`, `/de/install/`, `/es/install/` and `/ru/install/`. The language switcher in the
 header moves between them without losing the reader's place.
 
 Nothing else changes. There is no separate navigation file, no second `docs_dir`
@@ -87,7 +88,7 @@ cross-page links on this site and many carry a fragment, so this is not an edge
 case - and `mkdocs build --strict` validates a link's path but **not** its
 fragment, so nothing else notices.
 
-Pinning also means one link works in all four languages without being rewritten
+Pinning also means one link works in all five languages without being rewritten
 per locale, and a permalink somebody shared keeps working when they switch
 language.
 
@@ -131,8 +132,8 @@ Leave these exactly as they are in English:
 | Error and exception class names | `AuthorizationError` |
 | Product names | Docker Compose, PostgreSQL, Slack, Logfire |
 | Mermaid blocks | A label with a bracket or a quote in it breaks the graph, and the build cannot tell you - Mermaid renders in the browser |
-| A console label the reader has to find on screen | Where the UI shows it in English, `Admin → Response Ratings` is a landmark, not a phrase. Where the console's own catalog translates it (`frontend/messages/pl.json`, `de.json`), write the label the reader's UI shows with the English one in parentheses - „Głos (Voice)” - so it is findable in either language |
-| Image paths | One screenshot serves all four locales |
+| A console label the reader has to find on screen | Where the UI shows it in English, `Admin → Response Ratings` is a landmark, not a phrase. Where the console's own catalog translates it (`frontend/messages/pl.json`, `de.json`, `ru.json`), write the label the reader's UI shows with the English one in parentheses - „Głos (Voice)” - so it is findable in either language |
+| Image paths | One screenshot serves all five locales |
 
 A comment inside a code block is prose a reader reads rather than types, so it
 may be translated - but only where the block is an illustration. Never translate
@@ -192,6 +193,35 @@ reader meets both. So the choice is made once, here:
 German compounds them with a hyphen when the second half is German - Run-Kosten,
 Vault-Eintrag, Sandbox-Session - and keeps the English word's own capital.
 
+### Russian writes them in Cyrillic
+
+A Latin noun cannot take a Russian ending inside a Cyrillic sentence - "spec'а",
+"run'ом" - so `frontend/messages/ru.json` and the Russian pages write these nouns
+as Russian terms. The English name stays the one the API and the spec use, and it
+stays in code, keys and paths on a Russian page too.
+
+| English | Russian |
+|---|---|
+| agent | агент |
+| spec | спецификация |
+| capability | возможность |
+| skill | навык |
+| dataset | набор данных |
+| embed | встраивание |
+| budget | бюджет |
+| run | запуск |
+| prompt | промпт |
+| provider | провайдер |
+| token | токен |
+| vault | хранилище секретов («Секреты» in the menu) |
+| workspace | рабочее пространство |
+| sandbox | песочница |
+| MCP | MCP |
+
+MCP keeps its Latin spelling and takes no ending: «MCP-сервер». The vault
+is «хранилище секретов», «Секреты» as a menu item: written in Latin it reads
+as HashiCorp Vault, which the platform does not use.
+
 ### A generic person is masculine, in all three languages
 
 English says "the reader", "an operator", "whoever wrote the agent" without
@@ -202,7 +232,7 @@ both.
 
 So the generic form of a role is masculine - der Leser, der Betreiber, der Autor,
 der Entwickler, der Administrator, der Besitzer, der Kunde; czytelnik, operator,
-autor; el lector, el operador, el autor. This is about a person nobody has named.
+autor; el lector, el operador, el autor; читатель, оператор, автор. This is about a person nobody has named.
 A named example keeps the gender the example gives it, and so does a sentence
 about one particular person.
 
@@ -232,24 +262,24 @@ An agent's Evals tab, a dataset and an eval run's verdict name each of these
 one way, and a sentence that names a tab names it as the tab does. The console's
 catalogs hold them, and `frontend/messages/eval-terms.test.ts` refuses the mixed
 forms they replaced in the eval namespaces. A page quoting one of these screens
-uses the same word, and `scripts/check_docs_glossary.py` holds the Polish and
-German pages about them to it in `make lint`, from the same patterns in
+uses the same word, and `scripts/check_docs_glossary.py` holds the Polish,
+German and Russian pages about them to it in `make lint`, from the same patterns in
 `frontend/messages/eval-terms.json`.
 
-| English | Polish | German | Spanish |
-|---|---|---|---|
-| case | przypadek, przypadki, przypadków | der Fall, die Fälle | el caso |
-| eval, the Evals tab | ewaluacja, zakładka Ewaluacje | das Eval, der Tab Evals | el eval, la pestaña Evals |
-| judge | sędzia | der Bewerter | el juez |
-| review | przegląd | die Prüfung | la revisión |
-| environment | środowisko | die Umgebung | el entorno |
-| draft: an agent's unpublished spec | wersja robocza | der Entwurf | el borrador |
-| draft: a text waiting to be accepted - a gap's content, a generated case | szkic | der Entwurf | el borrador |
-| the Build tab | zakładka Budowa | der Tab Bauen | la pestaña Build |
-| breaks / fixes a case | psuje / naprawia przypadek | verschlechtert / behebt einen Fall | rompe / arregla un caso |
-| AI assistance | wsparcie AI | die KI-Unterstützung | la asistencia de IA |
-| the Activity page | Aktywność | die Aktivität | Activity |
-| the Publish button | Opublikuj | Veröffentlichen | Publicar |
+| English | Polish | German | Spanish | Russian |
+|---|---|---|---|---|
+| case | przypadek, przypadki, przypadków | der Fall, die Fälle | el caso | кейс, кейса, кейсов |
+| eval, the Evals tab | ewaluacja, zakładka Ewaluacje | das Eval, der Tab Evals | el eval, la pestaña Evals | оценка, вкладка Оценки |
+| judge | sędzia | der Bewerter | el juez | судья |
+| review | przegląd | die Prüfung | la revisión | проверка |
+| environment | środowisko | die Umgebung | el entorno | окружение |
+| draft: an agent's unpublished spec | wersja robocza | der Entwurf | el borrador | черновик |
+| draft: a text waiting to be accepted - a gap's content, a generated case | szkic | der Entwurf | el borrador | черновик |
+| the Build tab | zakładka Budowa | der Tab Bauen | la pestaña Build | вкладка Конструктор |
+| breaks / fixes a case | psuje / naprawia przypadek | verschlechtert / behebt einen Fall | rompe / arregla un caso | перестала проходить / теперь проходит кейс |
+| AI assistance | wsparcie AI | die KI-Unterstützung | la asistencia de IA | помощь ИИ |
+| the Activity page | Aktywność | die Aktivität | Activity | Активность |
+| the Publish button | Opublikuj | Veröffentlichen | Publicar | Опубликовать |
 
 A draft is still never the published version: the published / draft pair under
 [Terminology that has to be exact](#terminology-that-has-to-be-exact) keeps its
@@ -296,8 +326,8 @@ link in the same position, so a dropped, reordered or unlocalized link fails it.
 A page with no translation, like `docs/ROADMAP.md`, stays English, and the
 language bar is left alone: pointing at other languages is what it is for.
 
-**Each file carries a language bar** to its three translations, and the
-translations link back. Update all four when a language is added.
+**Each file carries a language bar** to its four translations, and the
+translations link back. Update all five when a language is added.
 
 `CHANGELOG.md` is not translated, for the reason `release-notes.md` is not: it is
 the commit history.
@@ -317,7 +347,8 @@ changelog entries themselves stay English, because they are the commit history.
 ## Searching in Polish
 
 lunr.js, which powers the site search, has no Polish stemmer, so `/pl/` search
-matches whole words rather than word stems. German and Spanish stem normally.
+matches whole words rather than word stems. German, Spanish and Russian stem
+normally.
 There is nothing to configure - the build says so in its log - but it is worth
 knowing before somebody reports it as a bug.
 
@@ -337,7 +368,7 @@ knowing before somebody reports it as a bug.
    paragraphs into one usually trips it.
 
 Changing an English page is the same loop from the other end: change it, then
-either retranslate the three translations in the same change, or leave them and
+either retranslate the four translations in the same change, or leave them and
 let the gate report them - what you cannot do is stamp `--update` over them.
 
 ## Recap

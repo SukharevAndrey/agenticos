@@ -84,7 +84,7 @@ repos:
         # here. That prefix is how codespell names a file during its own
         # directory walk, so those patterns never match the bare relative path
         # pre-commit hands it; the plain globs beside them - `*.pl.md`, `*.de.md`,
-        # `*.es.md` - match either way, which is what covers every translated
+        # `*.es.md`, `*.ru.md` - match either way, which is what covers every translated
         # page and the translated `README` and policy files in the repository
         # root. What is listed below is therefore the message catalogs, the one
         # English page whose glossary states each term in four languages, and the

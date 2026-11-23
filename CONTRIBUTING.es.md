@@ -2,11 +2,11 @@
 source_sha: "7cb876b5ef26"
 ---
 
-<!-- source_sha: 6ba9e8a85274 -->
+<!-- source_sha: df878ef8dc87 -->
 
 # Contribuir a AgenticOS
 
-[English](CONTRIBUTING.md) · [Polski](CONTRIBUTING.pl.md) · [Deutsch](CONTRIBUTING.de.md) · **Español**
+[English](CONTRIBUTING.md) · [Polski](CONTRIBUTING.pl.md) · [Deutsch](CONTRIBUTING.de.md) · **Español** · [Русский](CONTRIBUTING.ru.md)
 
 Gracias por pasarte. Este documento va corto de ceremonia y es concreto sobre lo
 que de verdad hace que se rechace una pull request.

@@ -1,8 +1,8 @@
-<!-- source_sha: 471d6c338ae3 -->
+<!-- source_sha: a0350918c2d6 -->
 
 # Bezpieczeństwo
 
-[English](SECURITY.md) · **Polski** · [Deutsch](SECURITY.de.md) · [Español](SECURITY.es.md)
+[English](SECURITY.md) · **Polski** · [Deutsch](SECURITY.de.md) · [Español](SECURITY.es.md) · [Русский](SECURITY.ru.md)
 
 > [!IMPORTANT]
 > Tekst angielski jest tym rozstrzygającym. Tłumaczenie jest udogodnieniem i tam,

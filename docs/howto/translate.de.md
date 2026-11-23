@@ -1,12 +1,12 @@
 ---
-source_sha: "85e967e18444"
+source_sha: "8a2d7c75436d"
 ---
 
 # Eine Seite übersetzen { #translate-a-page }
 
-Diese Site erscheint auf Englisch, Polnisch, Deutsch und Spanisch aus einem
+Diese Site erscheint auf Englisch, Polnisch, Deutsch, Spanisch und Russisch aus einem
 einzigen `docs/`-Baum. Englisch ist die Ausgangssprache: eine Seite wird zuerst
-auf Englisch geschrieben, und die anderen drei sind Übersetzungen davon, die
+auf Englisch geschrieben, und die anderen vier sind Übersetzungen davon, die
 zurückfallen können und das dann auch sagen sollen.
 
 ## Wo eine Übersetzung liegt { #where-a-translation-lives }
@@ -19,12 +19,13 @@ docs/install.md      the English source
 docs/install.pl.md   Polish
 docs/install.de.md   German
 docs/install.es.md   Spanish
+docs/install.ru.md   Russian
 ```
 
 [mkdocs-static-i18n](https://github.com/ultrabug/mkdocs-static-i18n) baut aus
 diesem Baum eine Site pro Locale. Englisch behält die URLs, die es schon immer
 veröffentlicht hat - `/install/` ist weiterhin `/install/` - und jede Übersetzung
-kommt daneben unter `/pl/install/`, `/de/install/` und `/es/install/` hinzu. Der
+kommt daneben unter `/pl/install/`, `/de/install/`, `/es/install/` und `/ru/install/` hinzu. Der
 Sprachumschalter in der Kopfzeile wechselt zwischen ihnen, ohne dass der Leser
 die Stelle verliert.
 
@@ -98,7 +99,7 @@ Fragment, das ist also kein Randfall - und `mkdocs build --strict` validiert den
 Pfad eines Links, aber **nicht** sein Fragment, sodass es sonst niemandem
 auffällt.
 
-Das Pinnen bedeutet außerdem, dass ein Link in allen vier Sprachen funktioniert,
+Das Pinnen bedeutet außerdem, dass ein Link in allen fünf Sprachen funktioniert,
 ohne pro Locale umgeschrieben zu werden, und dass ein Permalink, den jemand
 geteilt hat, beim Sprachwechsel weiter funktioniert.
 
@@ -144,8 +145,8 @@ Lassen Sie das Folgende genau so, wie es auf Englisch steht:
 | Namen von Fehler- und Ausnahmeklassen | `AuthorizationError` |
 | Produktnamen | Docker Compose, PostgreSQL, Slack, Logfire |
 | Mermaid-Blöcke | Ein Label mit einer Klammer oder einem Anführungszeichen bricht den Graphen, und der Build kann es Ihnen nicht sagen - Mermaid rendert im Browser |
-| Eine Beschriftung der Konsole, die der Leser auf dem Bildschirm finden muss | Wo die Oberfläche sie englisch zeigt, ist `Admin → Response Ratings` ein Orientierungspunkt und keine Formulierung. Wo der Katalog der Konsole selbst sie übersetzt (`frontend/messages/pl.json`, `de.json`), schreiben Sie die Beschriftung, die die Oberfläche des Lesers zeigt, mit der englischen in Klammern - „Stimme (Voice)“ -, damit sie in beiden Sprachen auffindbar ist |
-| Bildpfade | Ein Screenshot bedient alle vier Locales |
+| Eine Beschriftung der Konsole, die der Leser auf dem Bildschirm finden muss | Wo die Oberfläche sie englisch zeigt, ist `Admin → Response Ratings` ein Orientierungspunkt und keine Formulierung. Wo der Katalog der Konsole selbst sie übersetzt (`frontend/messages/pl.json`, `de.json`, `ru.json`), schreiben Sie die Beschriftung, die die Oberfläche des Lesers zeigt, mit der englischen in Klammern - „Stimme (Voice)“ -, damit sie in beiden Sprachen auffindbar ist |
+| Bildpfade | Ein Screenshot bedient alle fünf Locales |
 
 Ein Kommentar innerhalb eines Codeblocks ist Prosa, die ein Leser liest statt
 tippt, er darf also übersetzt werden - aber nur dort, wo der Block eine
@@ -207,6 +208,37 @@ Im Deutschen wird mit Bindestrich zusammengesetzt, sobald die zweite Hälfte
 deutsch ist - Run-Kosten, Vault-Eintrag, Sandbox-Session - und das englische Wort
 behält seine eigene Großschreibung.
 
+### Russisch schreibt sie kyrillisch { #russian-writes-them-in-cyrillic }
+
+Ein lateinisches Substantiv kann in einem kyrillischen Satz keine russische Endung
+annehmen - "spec'а", "run'ом" -, deshalb schreiben `frontend/messages/ru.json` und
+die russischen Seiten diese Substantive als russische Begriffe. Der englische Name
+bleibt der, den die API und der Spec verwenden, und er bleibt auch auf einer
+russischen Seite in Code, Schlüsseln und Pfaden stehen.
+
+| Englisch | Russisch |
+|---|---|
+| agent | агент |
+| spec | спецификация |
+| capability | возможность |
+| skill | навык |
+| dataset | набор данных |
+| embed | встраивание |
+| budget | бюджет |
+| run | запуск |
+| prompt | промпт |
+| provider | провайдер |
+| token | токен |
+| vault | хранилище секретов («Секреты» im Menü) |
+| workspace | рабочее пространство |
+| sandbox | песочница |
+| MCP | MCP |
+
+MCP behält seine lateinische Schreibung und nimmt keine Endung an:
+«MCP-сервер». Der Vault heißt «хранилище секретов», als Menüpunkt «Секреты»:
+in lateinischer Schrift läse er sich als HashiCorp Vault, den die Plattform
+nicht verwendet.
+
 ### Eine Person ohne Namen ist männlich, in allen drei Sprachen { #a-generic-person-is-masculine-in-all-three-languages }
 
 Das Englische sagt "the reader", "an operator", "whoever wrote the agent", ohne
@@ -217,7 +249,7 @@ nächsten hervor, für dieselbe Person, und ein Leser begegnet beidem.
 
 Die allgemeine Form einer Rolle ist deshalb männlich - der Leser, der Betreiber,
 der Autor, der Entwickler, der Administrator, der Besitzer, der Kunde;
-czytelnik, operator, autor; el lector, el operador, el autor. Das gilt für eine
+czytelnik, operator, autor; el lector, el operador, el autor; читатель, оператор, автор. Das gilt für eine
 Person, die niemand benannt hat. Ein benanntes Beispiel behält das Geschlecht,
 das das Beispiel ihm gibt, und ein Satz über eine bestimmte Person ebenso.
 
@@ -249,24 +281,24 @@ jeden dieser Begriffe auf eine Weise, und ein Satz, der einen Tab nennt, nennt i
 so, wie der Tab heißt. Die Kataloge der Konsole halten sie fest, und
 `frontend/messages/eval-terms.test.ts` lehnt in den Eval-Namespaces die gemischten
 Formen ab, die sie ersetzt haben. Eine Seite, die eine dieser Ansichten zitiert,
-verwendet dasselbe Wort, und `scripts/check_docs_glossary.py` hält die polnischen
-und deutschen Seiten dazu in `make lint` daran fest, mit denselben Mustern aus
+verwendet dasselbe Wort, und `scripts/check_docs_glossary.py` hält die polnischen,
+deutschen und russischen Seiten dazu in `make lint` daran fest, mit denselben Mustern aus
 `frontend/messages/eval-terms.json`.
 
-| English | Polish | German | Spanish |
-|---|---|---|---|
-| case | przypadek, przypadki, przypadków | der Fall, die Fälle | el caso |
-| eval, the Evals tab | ewaluacja, zakładka Ewaluacje | das Eval, der Tab Evals | el eval, la pestaña Evals |
-| judge | sędzia | der Bewerter | el juez |
-| review | przegląd | die Prüfung | la revisión |
-| environment | środowisko | die Umgebung | el entorno |
-| draft: an agent's unpublished spec | wersja robocza | der Entwurf | el borrador |
-| draft: a text waiting to be accepted - a gap's content, a generated case | szkic | der Entwurf | el borrador |
-| the Build tab | zakładka Budowa | der Tab Bauen | la pestaña Build |
-| breaks / fixes a case | psuje / naprawia przypadek | verschlechtert / behebt einen Fall | rompe / arregla un caso |
-| AI assistance | wsparcie AI | die KI-Unterstützung | la asistencia de IA |
-| the Activity page | Aktywność | die Aktivität | Activity |
-| the Publish button | Opublikuj | Veröffentlichen | Publicar |
+| English | Polish | German | Spanish | Russian |
+|---|---|---|---|---|
+| case | przypadek, przypadki, przypadków | der Fall, die Fälle | el caso | кейс, кейса, кейсов |
+| eval, the Evals tab | ewaluacja, zakładka Ewaluacje | das Eval, der Tab Evals | el eval, la pestaña Evals | оценка, вкладка Оценки |
+| judge | sędzia | der Bewerter | el juez | судья |
+| review | przegląd | die Prüfung | la revisión | проверка |
+| environment | środowisko | die Umgebung | el entorno | окружение |
+| draft: an agent's unpublished spec | wersja robocza | der Entwurf | el borrador | черновик |
+| draft: a text waiting to be accepted - a gap's content, a generated case | szkic | der Entwurf | el borrador | черновик |
+| the Build tab | zakładka Budowa | der Tab Bauen | la pestaña Build | вкладка Конструктор |
+| breaks / fixes a case | psuje / naprawia przypadek | verschlechtert / behebt einen Fall | rompe / arregla un caso | перестала проходить / теперь проходит кейс |
+| AI assistance | wsparcie AI | die KI-Unterstützung | la asistencia de IA | помощь ИИ |
+| the Activity page | Aktywność | die Aktivität | Activity | Активность |
+| the Publish button | Opublikuj | Veröffentlichen | Publicar | Опубликовать |
 
 Ein Entwurf ist weiterhin nie die veröffentlichte Version: Das Paar published /
 draft unter [Terminologie, die exakt sein muss](#terminology-that-has-to-be-exact)
@@ -319,8 +351,8 @@ einem weggelassenen, umgestellten oder nicht lokalisierten Link. Eine Seite ohne
 Übersetzung, etwa `docs/ROADMAP.md`, bleibt englisch, und die Sprachleiste bleibt
 unangetastet: auf andere Sprachen zu zeigen ist genau ihr Zweck.
 
-**Jede Datei trägt eine Sprachleiste** zu ihren drei Übersetzungen, und die
-Übersetzungen verlinken zurück. Aktualisieren Sie alle vier, wenn eine Sprache
+**Jede Datei trägt eine Sprachleiste** zu ihren vier Übersetzungen, und die
+Übersetzungen verlinken zurück. Aktualisieren Sie alle fünf, wenn eine Sprache
 dazukommt.
 
 `CHANGELOG.md` wird nicht übersetzt, aus dem Grund, aus dem `release-notes.md` es
@@ -343,8 +375,8 @@ Commit-Historie sind.
 ## Suche auf Polnisch { #searching-in-polish }
 
 lunr.js, das die Suche der Site antreibt, hat keinen polnischen Stemmer, also
-trifft die Suche unter `/pl/` ganze Wörter statt Wortstämme. Deutsch und Spanisch
-werden normal gestemmt. Es gibt nichts zu konfigurieren - der Build sagt es in
+trifft die Suche unter `/pl/` ganze Wörter statt Wortstämme. Deutsch, Spanisch und
+Russisch werden normal gestemmt. Es gibt nichts zu konfigurieren - der Build sagt es in
 seinem Log -, aber es ist gut zu wissen, bevor es jemand als Fehler meldet.
 
 ## Der Arbeitsablauf { #the-workflow }
@@ -365,7 +397,7 @@ seinem Log -, aber es ist gut zu wissen, bevor es jemand als Fehler meldet.
    zu einem verschmilzt, stolpert meist darüber.
 
 Eine englische Seite zu ändern ist dieselbe Schleife vom anderen Ende her: ändern
-Sie sie und übersetzen Sie dann entweder die drei Übersetzungen in derselben
+Sie sie und übersetzen Sie dann entweder die vier Übersetzungen in derselben
 Änderung neu, oder lassen Sie sie und lassen Sie das Tor sie melden - was Sie
 nicht tun dürfen, ist `--update` darüber zu stempeln.
 
