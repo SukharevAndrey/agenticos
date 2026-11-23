@@ -1,5 +1,5 @@
 ---
-source_sha: "8a2d7c75436d"
+source_sha: "6fc1559fdcc1"
 ---
 
 # Przetłumacz stronę { #translate-a-page }
@@ -394,6 +394,7 @@ i pozwól bramce je zgłosić — czego nie wolno, to ostemplować je przez `--u
 - `scripts/check_docs_i18n.py` kładzie `make lint` na brakującym, nieaktualnym
   albo osieroconym tłumaczeniu oraz na nagłówkach, które się nie zgadzają,
   a serwis oznacza czytelnikowi stronę nieprzetłumaczoną lub nieaktualną.
-- Kod, komendy, klucze, ścieżki i własne rzeczowniki produktu zostają angielskie;
-  wszystko dookoła nich jest tłumaczone.
+- Kod, komendy, klucze, ścieżki i własne rzeczowniki produktu zostają angielskie,
+  tyle że rosyjski zapisuje rzeczowniki cyrylicą; wszystko dookoła nich jest
+  tłumaczone.
 - Sformułowania dotyczące uprawnień i governance są dokładne, a nie przybliżone.

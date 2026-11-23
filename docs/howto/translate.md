@@ -380,6 +380,7 @@ let the gate report them - what you cannot do is stamp `--update` over them.
 - `scripts/check_docs_i18n.py` fails `make lint` on a missing, stale or orphaned
   translation and on headings that do not line up, and the site marks an
   untranslated or stale page for the reader.
-- Code, commands, keys, paths and the product's own nouns stay English;
-  everything around them is translated.
+- Code, commands, keys, paths and the product's own nouns stay English, except
+  that Russian writes the nouns in Cyrillic; everything around them is
+  translated.
 - Permission and governance wording is exact, not approximate.

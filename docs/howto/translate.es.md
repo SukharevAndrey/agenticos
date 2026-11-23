@@ -1,5 +1,5 @@
 ---
-source_sha: "8a2d7c75436d"
+source_sha: "6fc1559fdcc1"
 ---
 
 # Traduce una página { #translate-a-page }
@@ -398,5 +398,6 @@ que la puerta las reporte — lo que no puedes hacer es estampar `--update` enci
   falta, está obsoleta o ha quedado huérfana y ante encabezados que no cuadran, y
   el sitio marca para el lector una página sin traducir u obsoleta.
 - El código, los comandos, las claves, las rutas y los sustantivos propios del
-  producto se quedan en inglés; todo lo que los rodea se traduce.
+  producto se quedan en inglés, salvo que el ruso escribe los sustantivos en
+  cirílico; todo lo que los rodea se traduce.
 - La redacción sobre permisos y governance es exacta, no aproximada.

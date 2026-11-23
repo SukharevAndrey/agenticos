@@ -1,5 +1,5 @@
 ---
-source_sha: "8a2d7c75436d"
+source_sha: "6fc1559fdcc1"
 ---
 
 # Eine Seite übersetzen { #translate-a-page }
@@ -412,5 +412,6 @@ nicht tun dürfen, ist `--update` darüber zu stempeln.
   scheitern, und die Site markiert eine unübersetzte oder veraltete Seite für den
   Leser.
 - Code, Befehle, Schlüssel, Pfade und die eigenen Substantive des Produkts
-  bleiben englisch; alles darum herum wird übersetzt.
+  bleiben englisch, nur schreibt Russisch die Substantive kyrillisch; alles
+  darum herum wird übersetzt.
 - Formulierungen zu Berechtigungen und Governance sind exakt, nicht ungefähr.
