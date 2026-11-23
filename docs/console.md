@@ -1057,9 +1057,12 @@ first card offers the five, and
 the account menu changes the language at any time; the choice is kept on your
 account, so the console opens in it on every device you sign in on. You can also
 ask an agent - "switch to English" - and the page changes as it answers, without a
-reload. Every agent answers in it unless you write in another language. Product
-words - agent, skill, run, budget, MCP and the rest of the list in
-[translating](howto/translate.md) - stay English in every language.
+reload. Every agent answers in it unless you write in another language.
+
+In the Russian console, product terms such as agent, spec, skill and run appear
+as агент, спецификация, навык and запуск. MCP keeps its spelling, and API and
+exported YAML identifiers stay in English. The other console languages keep the
+English product terms listed in the [translation guide](howto/translate.md).
 
 The same card asks what you do, and **Settings → Profile** keeps the rest of what
 agents know about you: your role, what you work on and your time zone. Every agent

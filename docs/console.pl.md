@@ -1,5 +1,5 @@
 ---
-source_sha: "6b119d96cb03"
+source_sha: "c503c3cb6e75"
 ---
 
 # Konsola { #the-console }
@@ -1087,8 +1087,13 @@ języków, a menu konta zmienia język w każdej chwili; wybór jest zapisywany 
 koncie, więc konsola otwiera się w nim na każdym urządzeniu, na którym się
 logujesz. Możesz też poprosić agenta - "przełącz na angielski" - a strona zmieni
 się, gdy odpowie, bez przeładowania. Każdy agent odpowiada w nim, chyba że
-napiszesz w innym języku. Słowa produktu - agent, skill, run, budget, MCP i reszta listy z
-[tłumaczenia](howto/translate.md) - zostają angielskie w każdym języku.
+napiszesz w innym języku.
+
+W rosyjskiej konsoli terminy takie jak agent, spec, skill i run występują jako
+агент, спецификация, навык i запуск. Skrót MCP zachowuje swoją pisownię,
+a identyfikatory w API i eksportowanych plikach YAML pozostają po angielsku.
+Pozostałe języki konsoli zachowują angielskie terminy z
+[przewodnika tłumaczenia](howto/translate.md).
 
 Ta sama karta pyta, czym się zajmujesz, a **Ustawienia → Profil (Settings →
 Profile)** trzymają resztę tego, co agenci o tobie wiedzą: twoją rolę, nad czym

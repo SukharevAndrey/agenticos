@@ -1,5 +1,5 @@
 ---
-source_sha: "6b119d96cb03"
+source_sha: "c503c3cb6e75"
 ---
 
 # Die Konsole { #the-console }
@@ -1161,8 +1161,13 @@ die Wahl wird in Ihrem
 Konto gespeichert, sodass die Konsole auf jedem Gerät, auf dem Sie sich anmelden,
 in ihr öffnet. Sie können auch einen Agent bitten - "auf Englisch umstellen" -, und
 die Seite wechselt, während er antwortet, ohne Neuladen. Jeder Agent antwortet in
-ihr, außer Sie schreiben in einer anderen Sprache. Produktwörter - Agent, Skill, Run, Budget, MCP und der Rest der Liste
-unter [Übersetzen](howto/translate.md) - bleiben in jeder Sprache Englisch.
+ihr, außer Sie schreiben in einer anderen Sprache.
+
+In der russischen Konsole erscheinen Produktbegriffe wie Agent, Spec, Skill und
+Run als агент, спецификация, навык und запуск. Die Schreibweise von MCP bleibt
+gleich. Bezeichner in der API und in exportierten YAML-Dateien bleiben Englisch.
+Die anderen Konsolensprachen behalten die englischen Produktbegriffe aus dem
+[Übersetzungsleitfaden](howto/translate.md) bei.
 
 Dieselbe Karte fragt, was Sie tun, und **Einstellungen → Profil (Settings →
 Profile)** hält den Rest dessen, was Agents über Sie wissen: Ihre Rolle, woran Sie

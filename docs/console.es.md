@@ -1,5 +1,5 @@
 ---
-source_sha: "6b119d96cb03"
+source_sha: "c503c3cb6e75"
 ---
 
 # La consola { #the-console }
@@ -1118,9 +1118,11 @@ inicias sesión. También puedes pedírselo a un agent - "cambia a inglés" - y 
 página cambia mientras responde, sin recargar. Todos los agents responden en él
 salvo que escribas en otro idioma.
 
-Las palabras del producto - agent, skill, run, budget, MCP y el
-resto de la lista de [traducir](howto/translate.md) - siguen en inglés en todos
-los idiomas.
+En la consola en ruso, los términos del producto como agent, spec, skill y run
+aparecen como агент, спецификация, навык y запуск. La sigla MCP se conserva y los
+identificadores de la API y de los archivos YAML exportados siguen en inglés.
+Los demás idiomas de la consola conservan los términos en inglés de la
+[guía de traducción](howto/translate.md).
 
 La misma tarjeta pregunta a qué te dedicas, y **Settings → Profile** guarda el
 resto de lo que los agents saben de ti: tu rol, en qué trabajas y tu zona horaria.
