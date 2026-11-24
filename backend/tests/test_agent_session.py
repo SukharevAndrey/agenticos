@@ -4245,8 +4245,9 @@ class TestStarterSetupReply:
             ("pl", "Cześć"),
             ("de", "Hallo"),
             ("tr", "Merhaba"),
+            ("fr", "Bonjour"),
             ("ru", "Здравствуйте"),
-            ("fr", "Hi"),
+            ("es", "Hi"),
         ],
     )
     @pytest.mark.parametrize("saved", ["saved", None])

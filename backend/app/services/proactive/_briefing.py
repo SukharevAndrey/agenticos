@@ -25,6 +25,7 @@ HEADING = {
     "pl": "Znaleziska z twoich obserwacji ({count}):",
     "de": "Neu aus Ihren Beobachtungen ({count}):",
     "tr": "Watch'larınızdan {count} yeni bulgu:",
+    "fr": "{count} nouveautés de vos veilles :",
     "ru": "Новое из ваших наблюдений ({count}):",
 }
 MORE = {
@@ -32,6 +33,7 @@ MORE = {
     "pl": "…i jeszcze {count}.",
     "de": "…und {count} weitere.",
     "tr": "…ve {count} bulgu daha.",
+    "fr": "…et {count} de plus.",
     "ru": "…и ещё {count}.",
 }
 OPEN = {
@@ -39,6 +41,7 @@ OPEN = {
     "pl": "Wszystko w twoim inboksie: {url}",
     "de": "Alles in Ihrem Posteingang: {url}",
     "tr": "Tümünü Inbox'ınızda görün: {url}",
+    "fr": "Tout est dans votre boîte de réception : {url}",
     "ru": "Всё целиком — во «Входящих»: {url}",
 }
 

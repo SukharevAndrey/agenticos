@@ -8,6 +8,7 @@ import en from "./en.json";
 import pl from "./pl.json";
 import ru from "./ru.json";
 import tr from "./tr.json";
+import fr from "./fr.json";
 
 /**
  * That the catalog holds copy, and only copy.
@@ -158,6 +159,7 @@ describe.each([
   ["pl.json", pl],
   ["de.json", de],
   ["tr.json", tr],
+  ["fr.json", fr],
   ["ru.json", ru],
 ])("%s", (_name, catalog) => {
   const all = entries(catalog);
@@ -342,6 +344,7 @@ function icuContract(message: string): IcuContract {
 
 describe.each([
   ["Turkish", tr],
+  ["French", fr],
   ["Russian", ru],
 ])("%s ICU contracts", (_language, catalog) => {
   it("preserves the arguments, rich-text links and selector values supplied by callers", () => {

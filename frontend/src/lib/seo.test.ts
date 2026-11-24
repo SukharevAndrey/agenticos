@@ -49,6 +49,7 @@ describe("pageMetadata", () => {
       pl: `${siteOrigin()}/pl/legal/terms`,
       de: `${siteOrigin()}/de/legal/terms`,
       tr: `${siteOrigin()}/tr/legal/terms`,
+      fr: `${siteOrigin()}/fr/legal/terms`,
       ru: `${siteOrigin()}/ru/legal/terms`,
     });
   });
@@ -62,6 +63,7 @@ describe("pageMetadata", () => {
       pl: `${siteOrigin()}/pl`,
       de: `${siteOrigin()}/de`,
       tr: `${siteOrigin()}/tr`,
+      fr: `${siteOrigin()}/fr`,
       ru: `${siteOrigin()}/ru`,
     });
   });
@@ -129,6 +131,7 @@ describe("pageMetadata", () => {
       OG_LOCALE.en,
       OG_LOCALE.de,
       OG_LOCALE.tr,
+      OG_LOCALE.fr,
       OG_LOCALE.ru,
     ]);
   });
